@@ -13,3 +13,6 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 
 #3. Replace with JerryKuKu’s Argon
 #rm openwrt/package/lean/luci-theme-argon -rf
+
+sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
