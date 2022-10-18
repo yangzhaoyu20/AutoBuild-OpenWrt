@@ -14,5 +14,9 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 #3. Replace with JerryKuKu’s Argon
 #rm openwrt/package/lean/luci-theme-argon -rf
 
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+#4. add other sources
+sed -i 's/^#\(.*kenzo\)/\1/' feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
+
+sed -i 's/^#\(.*small\)/\1/' feeds.conf.default
+echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
